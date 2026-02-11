@@ -42,6 +42,8 @@ vector<vector<User *>>::iterator User::getAdjList()
     for (it = userAdj.begin(); it != userAdj.end(); ++it)
         if (it->front() == this)
             return it;
+
+    return userAdj.end(); //This Shall Never Happen!
 }
 
 void User::showFollowers()

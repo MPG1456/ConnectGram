@@ -5,6 +5,7 @@
 #include <algorithm>
 
 #include "operation.h"
+#include "post.h"
 
 using namespace std;
 

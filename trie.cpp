@@ -1,5 +1,7 @@
 #include "trie.h"
 
+extern HistorySearch myHistorySearch;
+
 void Trie::insertNewWord(string newWord)
 {
     newWord = lowercase(newWord);
@@ -23,6 +25,8 @@ void Trie::searchPrefix()
 {
     string firstKey, key;
     cin >> firstKey;
+    myHistorySearch.push(firstKey);
+    
     key = lowercase(firstKey);
     TrieNode *current = root;
     int index;

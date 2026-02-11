@@ -3,15 +3,20 @@
 
 #include "user.h"
 #include "trie.h"
+#include "post.h"
+#include "search.h"
 
 using namespace std;
 
+class User;
+
 void WelcomeMessage();
 void Helper();
-void Operation();
+bool Operation();
 User *Login();
 User *SignUp();
 void MakeNewUser(string username, string password);
+void logout();
 
 string lowercase(string);
 

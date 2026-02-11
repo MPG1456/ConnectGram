@@ -5,7 +5,6 @@ Time::Time() :passedTime(0), year(0), month(0), day(0), hour(0), minute(0), seco
     auto now = std::chrono::system_clock::now();
     std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
     passedTime = currentTime;
-    cout << currentTime << endl;
     std::tm *localTime;
     localTime = std::localtime(&currentTime);
     populateFromTm(*localTime);
